@@ -1,4 +1,4 @@
-# BattArray-
+# BattArray
 In this group project, you will work together to conceptualize a mobile application for a specific real-world use case. The purpose of the project is to give you all a simulated experience of what working in a real early-stage software development team is actually like.
 
 At the end of the project you’ll have created a set of team deliverables that you can use as part of your portfolios, as well as having the experience and confidence of knowing that you (and a group of peers) can work together to deliver real tangible products! Let’s get started by first understanding the fictional company that we’ll be delivering our MVP solution for.

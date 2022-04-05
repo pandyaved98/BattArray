@@ -1,9 +1,13 @@
 // Packages Imports
-import { createStackNavigator, StackNavigationOptions } from "@react-navigation/stack";
+import {
+  createStackNavigator,
+  StackNavigationOptions,
+} from "@react-navigation/stack";
 import { useTheme } from "@react-navigation/native";
 
 // Types/components/Navigators imports
 import { AuthStackParamsList } from "./NavigationTypes";
+import VenderDashbaordScreen from "../VenderDashboard/VenderDashbaordScreen";
 
 // Create a Stack Navigator
 const Stack = createStackNavigator<AuthStackParamsList>();
@@ -19,7 +23,7 @@ function AuthNavigator() {
   };
 
   // Render
-  return <Stack.Navigator screenOptions={screenOptions}>{/* App Screens */}</Stack.Navigator>;
+  return <Stack.Navigator screenOptions={screenOptions}></Stack.Navigator>;
 }
 
 // Exporting AuthNavigator

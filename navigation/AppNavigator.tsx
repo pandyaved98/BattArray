@@ -32,7 +32,7 @@ function AppNavigator() {
         component={BatteryInventoryScreen}
       />
       <Stack.Screen
-        options={{ headerShown: false }}
+        // options={{ headerShown: false }}
         name="Battery Info"
         component={BatteryDetail}
       />

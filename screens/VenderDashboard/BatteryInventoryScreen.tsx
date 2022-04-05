@@ -4,6 +4,7 @@ import { data } from "./data";
 import { Feather } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 const BatteryInventoryScreen = ({ navigation }) => {
+  console.log(data);
   return (
     <View style={{ margin: "3%" }}>
       {data?.map((info) => (
@@ -18,7 +19,7 @@ const BatteryInventoryScreen = ({ navigation }) => {
               shadowColor: "#000000",
               shadowOffset: 5,
             }}
-            onPress={() => navigation.navigate("Battery Info")}
+            onPress={() => navigation.navigate("Battery Info", { data: info })}
           >
             <View>
               <View

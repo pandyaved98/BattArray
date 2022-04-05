@@ -1,7 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { BatteryFullIcon, CalenderIcon } from "../../assets";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { FontAwesome } from "@expo/vector-icons";
 const VenderDashbaordScreen = ({ navigation }) => {
   return (

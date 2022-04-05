@@ -1,3 +1,5 @@
+// This component has been created by - Kartikey Vaish
+
 // Packages Imports
 import { Text, StyleProp, TextStyle } from "react-native";
 import { useTheme } from "@react-navigation/native";

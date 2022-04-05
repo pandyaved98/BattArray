@@ -1,3 +1,5 @@
+// This component has been created by - Kartikey Vaish
+
 // Packages Imports
 import { StyleSheet, Pressable } from "react-native";
 import Animated, { FadeIn, FadeOut, Layout as LT } from "react-native-reanimated";

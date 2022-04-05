@@ -1,3 +1,5 @@
+// This component has been created by - Kartikey Vaish
+
 // Packages Imports
 import { StyleProp, TextStyle, ViewStyle } from "react-native";
 import { Button } from "react-native-paper";

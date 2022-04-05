@@ -1,3 +1,5 @@
+// This component has been created by - Kartikey Vaish
+
 // Packages Imports
 import { useTheme } from "@react-navigation/native";
 import { View, StyleSheet, ActivityIndicator, StyleProp, ViewStyle } from "react-native";

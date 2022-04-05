@@ -40,3 +40,10 @@ export interface BackDropProps {
     onBackDropPress?: any;
     visible?: boolean;
 }
+
+// interface for each marker
+export type CoordinateTypes = {
+    latitude: number;
+    longitude: number;
+    name?: string;
+};

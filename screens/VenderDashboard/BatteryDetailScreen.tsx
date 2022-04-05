@@ -1,10 +1,15 @@
+// This component has been created by - Wilson
 import { View, Text } from "react-native";
 import React from "react";
 import { Feather } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
-const BatteryDetail = ({ route, navigation }) => {
+import { AppScreenProps } from "../../navigation/NavigationTypes";
+
+const BatteryDetailScreen = ({ route, navigation }: AppScreenProps<"BatteryDetailScreen">) => {
   const BatteryInfo = route?.params?.data;
+
   console.log(BatteryInfo);
+
   return (
     <View style={{ margin: "6%" }}>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -31,9 +36,7 @@ const BatteryDetail = ({ route, navigation }) => {
         <Text style={{ color: "orange", fontSize: 17 }}>Charging</Text>
       </View>
       <View>
-        <Text style={{ fontSize: 17, marginTop: 60 }}>
-          Previous Rider Infomation:
-        </Text>
+        <Text style={{ fontSize: 17, marginTop: 60 }}>Previous Rider Infomation:</Text>
         <Text>Rahul Marvel</Text>
         <Text>Rider ID:3r7343</Text>
         <Text>Time Used: 4 hours</Text>
@@ -42,4 +45,4 @@ const BatteryDetail = ({ route, navigation }) => {
   );
 };
 
-export default BatteryDetail;
+export default BatteryDetailScreen;

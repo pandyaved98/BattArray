@@ -1,15 +1,15 @@
 // Packages Imports
-import {
-  createStackNavigator,
-  StackNavigationOptions,
-} from "@react-navigation/stack";
+import { createStackNavigator, StackNavigationOptions } from "@react-navigation/stack";
 import { useTheme } from "@react-navigation/native";
 
 // Types/components/Navigators imports
 import { AppStackParamsList } from "./NavigationTypes";
-import VenderDashbaordScreen from "../screens/VenderDashboard/VenderDashbaordScreen";
+
+// screen imports
 import BatteryInventoryScreen from "../screens/VenderDashboard/BatteryInventoryScreen";
-import BatteryDetail from "../screens/VenderDashboard/BatteryDetail";
+import BatteryDetailScreen from "../screens/VenderDashboard/BatteryDetailScreen";
+import VenderDashbaordScreen from "../screens/VenderDashboard/VenderDashbaordScreen";
+
 // Create a Stack Navigator
 const Stack = createStackNavigator<AppStackParamsList>();
 
@@ -20,22 +20,16 @@ function AppNavigator() {
 
   // default options for the Stack Screens
   const screenOptions: StackNavigationOptions = {
+    headerShown: false,
     headerStyle: { backgroundColor: colors.background },
   };
 
   // Render
   return (
     <Stack.Navigator screenOptions={screenOptions}>
-      <Stack.Screen name="Vendor Dashboard" component={VenderDashbaordScreen} />
-      <Stack.Screen
-        name="Battery Inventory"
-        component={BatteryInventoryScreen}
-      />
-      <Stack.Screen
-        // options={{ headerShown: false }}
-        name="Battery Info"
-        component={BatteryDetail}
-      />
+      <Stack.Screen name="VendorDashboardScreen" component={VenderDashbaordScreen} />
+      <Stack.Screen name="BatteryInventoryScreen" component={BatteryInventoryScreen} />
+      <Stack.Screen name="BatteryDetailScreen" component={BatteryDetailScreen} />
     </Stack.Navigator>
   );
 }

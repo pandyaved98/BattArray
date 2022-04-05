@@ -29,7 +29,7 @@ const VenderDashbaordScreen = ({ navigation }) => {
         <View>
           <TouchableOpacity
             style={{ alignItems: "center" }}
-            onPress={() => navigation.navigate("Battery Inventory")}
+            onPress={() => navigation.navigate("BatteryInventoryScreen")}
           >
             <FontAwesome name="battery-full" size={44} color="black" />
             <Text>Battery Inventory</Text>
@@ -43,7 +43,15 @@ const VenderDashbaordScreen = ({ navigation }) => {
         </View>
       </View>
       <View style={{ marginTop: "50%" }}>
-        <Text>Vender Details:</Text>
+        <Text
+          style={{
+            fontSize: 17,
+            fontWeight: "600",
+            // fontFamily: "Montserrat-Medium",
+          }}
+        >
+          Vender Details:
+        </Text>
         <Text>Naman Bhnasal </Text>
         <Text>Karol Garden , New delhi </Text>
       </View>

@@ -48,7 +48,7 @@ const VenderDashbaordScreen = ({ navigation }) => {
         <Text>Naman Bhnasal </Text>
         <Text>Karol Garden , New delhi </Text>
       </View>
-      <Text style={{ marginTop: 50 }}>Disable/enable Services</Text>
+      {/** <Text style={{ marginTop: 50 }}>Disable/enable Services</Text> */}
     </View>
   );
 };

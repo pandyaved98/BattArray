@@ -7,7 +7,7 @@ import { useTheme } from "@react-navigation/native";
 
 // Types/components/Navigators imports
 import { AuthStackParamsList } from "./NavigationTypes";
-import VenderDashbaordScreen from "../VenderDashboard/VenderDashbaordScreen";
+import VenderDashbaordScreen from "../screens/VenderDashboard/VenderDashbaordScreen";
 
 // Create a Stack Navigator
 const Stack = createStackNavigator<AuthStackParamsList>();

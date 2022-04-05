@@ -7,7 +7,9 @@ import { useTheme } from "@react-navigation/native";
 
 // Types/components/Navigators imports
 import { AppStackParamsList } from "./NavigationTypes";
-import VenderDashbaordScreen from "../VenderDashboard/VenderDashbaordScreen";
+import VenderDashbaordScreen from "../screens/VenderDashboard/VenderDashbaordScreen";
+import BatteryInventoryScreen from "../screens/VenderDashboard/BatteryInventoryScreen";
+import BatteryDetail from "../screens/VenderDashboard/BatteryDetail";
 // Create a Stack Navigator
 const Stack = createStackNavigator<AppStackParamsList>();
 
@@ -25,6 +27,15 @@ function AppNavigator() {
   return (
     <Stack.Navigator screenOptions={screenOptions}>
       <Stack.Screen name="Vendor Dashboard" component={VenderDashbaordScreen} />
+      <Stack.Screen
+        name="Battery Inventory"
+        component={BatteryInventoryScreen}
+      />
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="Battery Info"
+        component={BatteryDetail}
+      />
     </Stack.Navigator>
   );
 }

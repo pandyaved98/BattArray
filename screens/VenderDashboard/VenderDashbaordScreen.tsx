@@ -1,9 +1,9 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { BatteryFullIcon, CalenderIcon } from "../assets";
+import { BatteryFullIcon, CalenderIcon } from "../../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FontAwesome } from "@expo/vector-icons";
-const VenderDashbaordScreen = () => {
+const VenderDashbaordScreen = ({ navigation }) => {
   return (
     <View style={{ margin: "2.5%" }}>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -28,7 +28,10 @@ const VenderDashbaordScreen = () => {
         }}
       >
         <View>
-          <TouchableOpacity style={{ alignItems: "center" }}>
+          <TouchableOpacity
+            style={{ alignItems: "center" }}
+            onPress={() => navigation.navigate("Battery Inventory")}
+          >
             <FontAwesome name="battery-full" size={44} color="black" />
             <Text>Battery Inventory</Text>
           </TouchableOpacity>

@@ -1,9 +1,14 @@
 // Packages Imports
-import { createStackNavigator, StackNavigationOptions } from "@react-navigation/stack";
+import {
+  createStackNavigator,
+  StackNavigationOptions,
+} from "@react-navigation/stack";
 import { useTheme } from "@react-navigation/native";
 
 // Types/components/Navigators imports
 import { AppStackParamsList } from "./NavigationTypes";
+import RiderBooking from "../screens/VenderDashboard/RiderBooking";
+import RiderProfile from "../screens/profile/RiderProfile";
 
 // screen imports
 
@@ -22,7 +27,11 @@ function AppNavigator() {
   };
 
   // Render
-  return <Stack.Navigator screenOptions={screenOptions}>{/** App Screens */}</Stack.Navigator>;
+  return (
+    <Stack.Navigator screenOptions={screenOptions}>
+      <Stack.Screen name="RiderProfile" component={RiderProfile} />
+    </Stack.Navigator>
+  );
 }
 
 // Exporting AppNavigator

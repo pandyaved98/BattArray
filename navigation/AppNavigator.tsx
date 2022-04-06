@@ -34,7 +34,8 @@ function AppNavigator() {
       {/**  <Stack.Screen name="VendorDashboardScreen" component={VenderDashbaordScreen} />
       <Stack.Screen name="BatteryInventoryScreen" component={BatteryInventoryScreen} />
       <Stack.Screen name="BatteryDetailScreen" component={BatteryDetailScreen} /> */}
-      {/** */}{" "}
+      {/** */}
+
       <Stack.Screen name="RiderProfileScreen" component={RiderProfile} />
     </Stack.Navigator>
   );

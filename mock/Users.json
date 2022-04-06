@@ -1,0 +1,250 @@
+[
+    {
+        "id": 1,
+        "name": "Kathlin Pellington",
+        "profile_picture": "http://dummyimage.com/245x126.png/5fa2dd/ffffff",
+        "email": "kpellington0@weather.com",
+        "password": "jeZY71BoIpe",
+        "account_type": "RIDER"
+    },
+    {
+        "id": 2,
+        "name": "Julio Patise",
+        "profile_picture": "http://dummyimage.com/112x145.png/5fa2dd/ffffff",
+        "email": "jpatise1@bigcartel.com",
+        "password": "KZbFKq",
+        "account_type": "VENDOR",
+        "batteries": [
+            {
+                "id": "1",
+                "health": "GOOD",
+                "charge": 100,
+                "selling_prices": [
+                    {
+                        "min": 0,
+                        "max": 40,
+                        "cost": 150
+                    },
+                    {
+                        "min": 40,
+                        "max": 60,
+                        "cost": 80
+                    },
+                    {
+                        "min": 60,
+                        "max": 100,
+                        "cost": 40
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "health": "AVERAGE",
+                "charge": 60,
+                "selling_prices": [
+                    {
+                        "min": 0,
+                        "max": 40,
+                        "cost": 150
+                    },
+                    {
+                        "min": 40,
+                        "max": 60,
+                        "cost": 80
+                    },
+                    {
+                        "min": 60,
+                        "max": 100,
+                        "cost": 40
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Lani Crew",
+        "profile_picture": "http://dummyimage.com/241x168.png/ff4444/ffffff",
+        "email": "lcrew2@taobao.com",
+        "password": "DDFVAWX",
+        "account_type": "RIDER"
+    },
+    {
+        "id": 4,
+        "name": "Richart Twinbourne",
+        "profile_picture": "http://dummyimage.com/223x139.png/cc0000/ffffff",
+        "email": "rtwinbourne3@bandcamp.com",
+        "password": "KJZIcSdsK4",
+        "account_type": "VENDOR",
+        "batteries": [
+            {
+                "id": "1",
+                "health": "BAD",
+                "charge": 100,
+                "selling_prices": [
+                    {
+                        "min": 0,
+                        "max": 40,
+                        "cost": 180
+                    },
+                    {
+                        "min": 40,
+                        "max": 60,
+                        "cost": 100
+                    },
+                    {
+                        "min": 60,
+                        "max": 100,
+                        "cost": 60
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "health": "AVERAGE",
+                "charge": 60,
+                "selling_prices": [
+                    {
+                        "min": 0,
+                        "max": 40,
+                        "cost": 150
+                    },
+                    {
+                        "min": 40,
+                        "max": 60,
+                        "cost": 80
+                    },
+                    {
+                        "min": 60,
+                        "max": 100,
+                        "cost": 40
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Palmer Dormer",
+        "profile_picture": "http://dummyimage.com/102x198.png/ff4444/ffffff",
+        "email": "pdormer4@nyu.edu",
+        "password": "LRljGO5iQa",
+        "account_type": "VENDOR",
+        "batteries": [
+            {
+                "id": "1",
+                "health": "PERFECT",
+                "charge": 100,
+                "selling_prices": [
+                    {
+                        "min": 0,
+                        "max": 40,
+                        "cost": 150
+                    },
+                    {
+                        "min": 40,
+                        "max": 60,
+                        "cost": 80
+                    },
+                    {
+                        "min": 60,
+                        "max": 100,
+                        "cost": 40
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "health": "GOOD",
+                "charge": 60,
+                "selling_prices": [
+                    {
+                        "min": 0,
+                        "max": 40,
+                        "cost": 150
+                    },
+                    {
+                        "min": 40,
+                        "max": 60,
+                        "cost": 80
+                    },
+                    {
+                        "min": 60,
+                        "max": 100,
+                        "cost": 40
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Fannie McClaurie",
+        "profile_picture": "http://dummyimage.com/183x109.png/5fa2dd/ffffff",
+        "email": "fmcclaurie5@un.org",
+        "password": "qz08foPbz",
+        "account_type": "RIDER"
+    },
+    {
+        "id": 7,
+        "name": "Kipper Tiebe",
+        "profile_picture": "http://dummyimage.com/186x192.png/dddddd/000000",
+        "email": "ktiebe6@newsvine.com",
+        "password": "UjLZjmeb",
+        "account_type": "RIDER"
+    },
+    {
+        "id": 8,
+        "name": "Wilona Spavins",
+        "profile_picture": "http://dummyimage.com/225x175.png/ff4444/ffffff",
+        "email": "wspavins7@webmd.com",
+        "password": "CczQ7sd",
+        "account_type": "VENDOR",
+        "batteries": [
+            {
+                "id": "1",
+                "health": "BAD",
+                "charge": 0,
+                "selling_prices": [
+                    {
+                        "min": 0,
+                        "max": 40,
+                        "cost": 150
+                    },
+                    {
+                        "min": 40,
+                        "max": 60,
+                        "cost": 80
+                    },
+                    {
+                        "min": 60,
+                        "max": 100,
+                        "cost": 40
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "health": "AVERAGE",
+                "charge": 60,
+                "selling_prices": [
+                    {
+                        "min": 0,
+                        "max": 40,
+                        "cost": 150
+                    },
+                    {
+                        "min": 40,
+                        "max": 60,
+                        "cost": 80
+                    },
+                    {
+                        "min": 60,
+                        "max": 100,
+                        "cost": 40
+                    }
+                ]
+            }
+        ]
+    }
+]

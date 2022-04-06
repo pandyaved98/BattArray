@@ -16,6 +16,7 @@ export type AppStackParamsList = {
     BatteryInventoryScreen: undefined;
     BatteryDetailScreen: { data?: any };
     RiderBooking: undefined;
+    VendorProfileScreen: undefined
 };
 
 // Props for Auth Navigator's Screens

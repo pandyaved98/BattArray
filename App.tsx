@@ -1,7 +1,6 @@
 // Import all necessary packages
 import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet, Text, View } from "react-native";
-import AppNavigator from "./navigation/AppNavigator";
 import { Provider as PaperProvider } from "react-native-paper";
 
 // export the app component
@@ -10,11 +9,9 @@ export default function App() {
     <NavigationContainer>
       <PaperProvider>
         {/* If User is logged in we will show the AppNavigator or else we will show the AuthNavigator */}
-        {/** <View style={styles.container}>
+        <View style={styles.container}>
           <Text>Hello World</Text>
-        </View>*/}
-
-        <AppNavigator />
+        </View>
       </PaperProvider>
     </NavigationContainer>
   );

@@ -1,18 +1,11 @@
 // Packages Imports
-import {
-  createStackNavigator,
-  StackNavigationOptions,
-} from "@react-navigation/stack";
+import { createStackNavigator, StackNavigationOptions } from "@react-navigation/stack";
 import { useTheme } from "@react-navigation/native";
 
 // Types/components/Navigators imports
 import { AppStackParamsList } from "./NavigationTypes";
 
 // screen imports
-import BatteryInventoryScreen from "../screens/VenderDashboard/BatteryInventoryScreen";
-import BatteryDetailScreen from "../screens/VenderDashboard/BatteryDetailScreen";
-import VenderDashbaordScreen from "../screens/VenderDashboard/VenderDashbaordScreen";
-import RiderProfile from "../screens/profile/RiderProfile";
 
 // Create a Stack Navigator
 const Stack = createStackNavigator<AppStackParamsList>();
@@ -29,16 +22,7 @@ function AppNavigator() {
   };
 
   // Render
-  return (
-    <Stack.Navigator screenOptions={screenOptions}>
-      {/**  <Stack.Screen name="VendorDashboardScreen" component={VenderDashbaordScreen} />
-      <Stack.Screen name="BatteryInventoryScreen" component={BatteryInventoryScreen} />
-      <Stack.Screen name="BatteryDetailScreen" component={BatteryDetailScreen} /> */}
-      {/** */}
-
-      <Stack.Screen name="RiderProfileScreen" component={RiderProfile} />
-    </Stack.Navigator>
-  );
+  return <Stack.Navigator screenOptions={screenOptions}>{/** App Screens */}</Stack.Navigator>;
 }
 
 // Exporting AppNavigator

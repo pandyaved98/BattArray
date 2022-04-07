@@ -2,7 +2,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet, Text, View } from "react-native";
 import { Provider as PaperProvider } from "react-native-paper";
-import AppNavigator from "./navigation/AppNavigator";
 
 // export the app component
 export default function App() {

@@ -4,7 +4,7 @@ import {
   StackNavigationOptions,
 } from "@react-navigation/stack";
 import { useTheme } from "@react-navigation/native";
-
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
 // Types/components/Navigators imports
 import { AppStackParamsList } from "./NavigationTypes";
 import SearchVendor from "../screens/RiderDashboard/SearchVendor";

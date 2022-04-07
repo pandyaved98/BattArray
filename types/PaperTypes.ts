@@ -1,3 +1,5 @@
+// Types file made by - Kartikey Vaish
+
 // import the required modules
 import { Button, TextInput, Snackbar } from "react-native-paper";
 

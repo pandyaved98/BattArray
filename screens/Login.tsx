@@ -8,8 +8,9 @@ import AuthContext from "../context/AuthContext";
 var { width } = Dimensions.get("window");
 import Users from "../mock/Users.json";
 import AppLoading from "../components/AppLoading";
+import { AuthScreenProps } from "../navigation/NavigationTypes";
 
-const Login = () => {
+const Login = ({ navigation }: AuthScreenProps<"LoginScreen">) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -30,7 +31,6 @@ const Login = () => {
         return;
       }
 
-      console.log(user);
       let findUser = Users.findIndex(item => item.email === email && item.password === password);
       if (findUser === -1) {
         SetLoading(false);
@@ -69,6 +69,10 @@ const Login = () => {
         />
         <View>{error ? <Error message={error} /> : null}</View>
         <Button onPress={login} title="Login" />
+
+        <View style={{ marginTop: 10 }}>
+          <Button title="Sign Up" onPress={() => navigation.navigate("SignUpScreen")} />
+        </View>
       </FormContainer>
 
       <AppLoading visible={Loading} loadingText="Logging In.." />

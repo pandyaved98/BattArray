@@ -14,8 +14,8 @@ function UserDetailsItem(props: { title: string; value: string }) {
   // render
   return (
     <View style={styles.container}>
-      <AppText text={title} size={22} />
-      <AppText text={value} size={22} />
+      <AppText text={title} size={20} />
+      <AppText text={value} size={20} />
     </View>
   );
 }

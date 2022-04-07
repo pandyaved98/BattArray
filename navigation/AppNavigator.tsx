@@ -28,11 +28,7 @@ function AppNavigator() {
   };
 
   // Render
-  return (
-    <Stack.Navigator screenOptions={screenOptions}>
-      <Stack.Screen name="RiderPayment" component={PaymentScreen} />
-    </Stack.Navigator>
-  );
+  return <Stack.Navigator screenOptions={screenOptions}></Stack.Navigator>;
 }
 
 // Exporting AppNavigator

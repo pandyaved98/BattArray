@@ -10,10 +10,9 @@ export default function App() {
     <NavigationContainer>
       <PaperProvider>
         {/* If User is logged in we will show the AppNavigator or else we will show the AuthNavigator */}
-        {/**<View style={styles.container}>
+        <View style={styles.container}>
           <Text>Hello World</Text>
-        </View> */}
-        <AppNavigator />
+        </View>
       </PaperProvider>
     </NavigationContainer>
   );

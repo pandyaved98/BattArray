@@ -1,3 +1,5 @@
+// Types file made by - Kartikey Vaish
+
 // import the required packages
 import { ActivityIndicatorProps, ColorValue, StyleProp, TextProps, ViewStyle } from "react-native";
 

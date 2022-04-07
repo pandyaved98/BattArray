@@ -1,100 +1,78 @@
 import { View, Text,TextInput,Image,KeyboardAvoidingView ,Button,  TouchableOpacity , Dimensions, StyleSheet } from 'react-native'
 import React,{useState} from 'react' ;
 import { ScrollView } from 'react-native-gesture-handler';
+import FormContainer from './Form/FormContainer';
+import Input from './Form/Input';
+import Error from './Form/Error';
 var {width} = Dimensions.get('window')
 
-const SignUp = () => {
+const SignUp = (props) => {
   const onSubmit = () =>{
    console.log("Pressed") ; 
   }
-  const [firstName,setFirstname] = useState('') ; 
+  const [name,setName] = useState('') ; 
   const [email,setEmail] = useState('') ; 
-  const [password , setPassword] = useState('') ; 
+  const [password , setPassword] = useState('') ;
+  const [error,setError] = useState('') ;  
+
+  const register = () =>{
+    let user = {
+      name:name , 
+      email:email,
+      password:password,
+      
+    } ; 
+    if(email==="" || password==""){
+      setError("Please Fill In Your Credentials")
+    }
+   
+  }
+
   return (
-    <KeyboardAvoidingView >
-      <ScrollView style={styles.container}>
-      <Image source={require('../assets/bike.jpg')} style={styles.container_image}/>
-      <Text style={styles.signUpText}>Sign Up</Text>
-      <View>
-      <TextInput
-         style={styles.firstNameInput} 
-         placeholder="First Name"   
-      />
-      <TextInput
-         style={styles.firstNameInput} 
-         placeholder="Email"   
-      />
-      <TextInput 
-        style={styles.password}
-        placeholder="Password"
-      />
-      <TextInput 
-        style={styles.confirmPassword}
-        placeholder="Confirm Here Password"
-      />
-      <View  style={styles.submitButton}>
-        <Button 
-          onPress={onSubmit}
-          title="Submit"
+    <KeyboardAvoidingView style={styles.container}>
 
-        />
-      </View>
-
-      </View>
-      </ScrollView>
+    <Image style={styles.bikeImage} source={require('../assets/bike.jpg')} />
+    <FormContainer title={"Register"}>
+      <Input 
+          placeholder={"Name"}
+          name={"name"}
+          id={"name"}
+          onChangeText={(text)=>setName(text)}
+      />
+     <Input
+      placeholder={"Email"}
+      name={"email"}
+      id={"email"}
+      onChangeText={(text) => setEmail(text.toLowerCase())}
+    />
+    <Input
+      placeholder={"Password"}
+      name={"password"}
+      id={"password"}
+      secureTextEntry={true}
+      onChangeText={(text) => setPassword(text)}
+    />
+    <View>
+    {error ? <Error message={error} /> : null}
+    </View>
+    <View>
+      <Button title='Register' onPress={() => register()} >
+        <Text style={[{marginLeft:25, color: "white" , justifyContent:'center' }]}>Register</Text>
+      </Button>
+    </View>
+    </FormContainer>
     </KeyboardAvoidingView>
   )
+  
 }
 const styles = StyleSheet.create({
   container:{
-    marginTop:50,
+    marginTop:150,
+    alignItems:'center',
   },
-  container_image:{
-    height:165,
-    width:width-45,
-  },
-  buttonSubmit:{
-    height:45,
-  },
-  signUpText:{
-    fontSize:28,
-    justifyContent:'center',
-    textAlign:'center',
-    fontWeight:'400',
-  },
-
-  firstNameInput:{
-    backgroundColor:'#F5F5F5',
-    height:70,
-    width:width - 40,
-    borderRadius:20,
-    margin:10,
-    padding:20,
-    fontSize:18,
-  },
-  password:{
-    backgroundColor:'#F5F5F5',
-    height:70,
-    width:width - 40,
-    borderRadius:20,
-    margin:10,
-    padding:20,
-    fontSize:18,
-  },
-  confirmPassword:{
-    backgroundColor:'#F5F5F5',
-    height:70,
-    width:width - 40,
-    borderRadius:20,
-    margin:10,
-    padding:20,
-    fontSize:18,
-  },
-  submitButton:{
-  
-    width:width - 45,
-    marginLeft:10,
-    marginTop:20,
+  bikeImage:{
+    height:250,
+    width:width-40,
   }
 
 })

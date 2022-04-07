@@ -1,5 +1,5 @@
 import { View, Text , TextInput ,Image , KeyboardAvoidingView , Button , Dimensions , StyleSheet} from 'react-native'
-import React from 'react'
+import React , {useState} from 'react'
 var {width} = Dimensions.get('window') ;
 const Login = () => {
   const onSubmit = () =>{

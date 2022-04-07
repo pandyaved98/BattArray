@@ -36,20 +36,18 @@ function AppNavigator() {
 
   // Render
   return (
-    <Stack.Navigator screenOptions={screenOptions}>
-      {User?.account_type === "VENDOR" ? (
-        <>
-          <Stack.Screen name="VendorDashboardScreen" component={VendorDashboardScreen} />
-          <Stack.Screen name="VendorProfileScreen" component={VendorProfileScreen} />
-        </>
-      ) : (
-        <>
-          <Stack.Screen name="RiderProfileScreen" component={RiderProfile} />
-          <Stack.Screen name="NearbyVendorsScreen" component={NearbyVendorsScreen} />
-          <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
-          <Stack.Screen name="RiderBookingDetailScreen" component={RiderBooking} />
-        </>
-      )}
+    <Stack.Navigator
+      screenOptions={screenOptions}
+      initialRouteName={
+        User.account_type === "RIDER" ? "NearbyVendorsScreen" : "VendorDashboardScreen"
+      }
+    >
+      <Stack.Screen name="NearbyVendorsScreen" component={NearbyVendorsScreen} />
+      <Stack.Screen name="RiderProfileScreen" component={RiderProfile} />
+      <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
+      <Stack.Screen name="RiderBookingDetailScreen" component={RiderBooking} />
+      <Stack.Screen name="VendorDashboardScreen" component={VendorDashboardScreen} />
+      <Stack.Screen name="VendorProfileScreen" component={VendorProfileScreen} />
       <Stack.Screen name="BatteryDetailScreen" component={BatteryDetailScreen} />
       <Stack.Screen name="BatteryInventoryScreen" component={BatteryInventoryScreen} />
       <Stack.Screen name="BatteryBookingScreen" component={BatteryBooking} />

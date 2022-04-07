@@ -25,7 +25,7 @@ function AuthProvider() {
   // Render component based on user authentication status
   return (
     <AuthContext.Provider value={value}>
-      {User ? <AppNavigator /> : <AuthNavigator />}
+      {User !== null ? <AppNavigator /> : <AuthNavigator />}
     </AuthContext.Provider>
   );
 }

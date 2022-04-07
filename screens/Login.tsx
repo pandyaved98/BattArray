@@ -7,21 +7,25 @@ import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 var { width } = Dimensions.get("window");
 import Users from "../mock/Users.json";
+import AppLoading from "../components/AppLoading";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [Loading, SetLoading] = useState(false);
 
   const { Login } = useContext(AuthContext);
 
   const login = () => {
     try {
+      SetLoading(true);
       let user = {
         email: email,
         password: password,
       };
       if (email === "" || password === "") {
+        SetLoading(false);
         setError("Please Fill In Your Credentials");
         return;
       }
@@ -29,12 +33,15 @@ const Login = () => {
       console.log(user);
       let findUser = Users.findIndex(item => item.email === email && item.password === password);
       if (findUser === -1) {
+        SetLoading(false);
         setError("Invalid Credentials");
         return;
       }
 
+      SetLoading(false);
       Login({ ...Users[findUser] });
     } catch (error) {
+      SetLoading(false);
       console.log(error);
     }
   };
@@ -63,6 +70,8 @@ const Login = () => {
         <View>{error ? <Error message={error} /> : null}</View>
         <Button onPress={login} title="Login" />
       </FormContainer>
+
+      <AppLoading visible={Loading} loadingText="Logging In.." />
     </View>
   );
 };

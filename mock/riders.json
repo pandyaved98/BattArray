@@ -1,0 +1,41 @@
+[{
+    "id": "1",
+    "name": "Clark Kent",
+    "rider_id": "0021",
+    "email": "testemail1@gmail.com",
+    "ev_type": "light",
+    "last_appoint": "2021-05-15T13:49:51.141Z"
+},
+{
+    "id": "2",
+    "name": "Bruce Banner",
+    "rider_id": "0045",
+    "email": "testemail2@gmail.com",
+    "ev_type": "heavy",
+    "last_appoint": "2021-03-10T13:49:51.141Z"
+},
+{
+    "id": "3",
+    "name": "Tony Stark",
+    "rider_id": "1051",
+    "email": "testemail3@gmail.com",
+    "ev_type": "light",
+    "last_appoint": "2021-06-10T13:49:51.141Z"
+},
+{
+    "id": "4",
+    "name": "Bruce Banner",
+    "rider_id": "2005",
+    "email": "testemail4@gmail.com",
+    "ev_type": "heavy",
+    "last_appoint": "2020-12-10T13:49:51.141Z"
+},
+{
+    "id": "5",
+    "name": "Nick Fury",
+    "rider_id": "6654",
+    "email": "testemail5@gmail.com",
+    "ev_type": "light",
+    "last_appoint": "2021-04-10T13:49:51.141Z"
+}
+]

@@ -12,6 +12,12 @@ export type AuthStackParamsList = {
 export type AppStackParamsList = {
     // App Stack Screens
     HomeScreen: undefined;
+    VendorDashboardScreen: undefined;
+    BatteryInventoryScreen: undefined;
+    BatteryDetailScreen: { data?: any };
+    RiderBooking: undefined;
+    VendorProfileScreen: undefined
+    NearbyVendorsScreen: undefined;
 };
 
 // Props for Auth Navigator's Screens

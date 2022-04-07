@@ -19,7 +19,7 @@ function AuthNavigator() {
   };
 
   // Render
-  return <Stack.Navigator screenOptions={screenOptions}>{/* App Screens */}</Stack.Navigator>;
+  return <Stack.Navigator screenOptions={screenOptions}>{/* Auth Screens */}</Stack.Navigator>;
 }
 
 // Exporting AuthNavigator

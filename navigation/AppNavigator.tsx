@@ -5,6 +5,8 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 // Types/components/Navigators imports
 import { AppStackParamsList } from "./NavigationTypes";
 
+// screen imports
+
 // Create a Stack Navigator
 const Stack = createStackNavigator<AppStackParamsList>();
 
@@ -15,11 +17,12 @@ function AppNavigator() {
 
   // default options for the Stack Screens
   const screenOptions: StackNavigationOptions = {
+    headerShown: false,
     headerStyle: { backgroundColor: colors.background },
   };
 
   // Render
-  return <Stack.Navigator screenOptions={screenOptions}>{/* App Screens */}</Stack.Navigator>;
+  return <Stack.Navigator screenOptions={screenOptions}>{/**App Screens */}</Stack.Navigator>;
 }
 
 // Exporting AppNavigator

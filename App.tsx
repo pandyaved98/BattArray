@@ -1,26 +1,28 @@
 // Import all necessary packages
+import { useContext } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { StyleSheet, Text, View } from "react-native";
-import HomeScreen from "./screens/HomeScreen";
-import Login from "./screens/Login";
-import OnBoarding from "./screens/OnBoarding/OnBoarding";
-import SignUp from "./screens/SignUp";
+import { Provider as PaperProvider } from "react-native-paper";
+
+// Local Imports
+import AppNavigator from "./navigation/AppNavigator";
+import AuthContext from "./context/AuthContext";
+import AuthNavigator from "./navigation/AuthNavigator";
+import AuthProvider from "./providers/AuthProvider";
 
 // export the app component
 export default function App() {
+  // get the context from the AuthContext
+  const { User } = useContext(AuthContext);
+
+  // Render app component
   return (
-      <View style={styles.container}>
-        <OnBoarding />
-      </View>
+    <AuthProvider>
+      <NavigationContainer>
+        <PaperProvider>
+          {/* If User is logged in we will show the AppNavigator or else we will show the AuthNavigator */}
+          {/* {User ? <AppNavigator /> : <AuthNavigator />} */}
+        </PaperProvider>
+      </NavigationContainer>
+    </AuthProvider>
   );
 }
-
-// styles
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  }
-});

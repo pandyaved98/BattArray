@@ -1,29 +1,32 @@
+// Imports
+import VendorData from "../mock/Vendors.json";
+
 // function to get mock data for the nearby vendors
 // Creator - Kartikey Vaish
 export const getVendors = (latitude: number, longitude: number) => {
     return [
         {
-            name: "Vendor 1",
+            name: VendorData[0].name,
             latitude: latitude,
             longitude: longitude,
         },
         {
-            name: "Vendor 2",
+            name: VendorData[1].name,
             latitude: latitude + 0.011,
             longitude: longitude + 0.011,
         },
         {
-            name: "Vendor 3",
+            name: VendorData[2].name,
             latitude: latitude + 0.002,
             longitude: longitude + 0.012,
         },
         {
-            name: "Vendor 4",
+            name: VendorData[3].name,
             latitude: latitude - 0.011,
             longitude: longitude - 0.003,
         },
         {
-            name: "Vendor 5",
+            name: VendorData[4].name,
             latitude: latitude - 0.018,
             longitude: longitude - 0.004,
         },

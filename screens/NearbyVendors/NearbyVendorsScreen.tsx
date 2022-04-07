@@ -1,19 +1,23 @@
-// This component has been created by - Kartikey Vaish
+// This screen has been created by - Kartikey Vaish
 
 // Packages Imports
 import { useEffect, useRef, useState } from "react";
-import { View, StyleSheet, Linking } from "react-native";
+import { View, StyleSheet, Linking, FlatList } from "react-native";
 import * as Location from "expo-location";
 import MapView, { Marker } from "react-native-maps";
 
 // Local Imports
-import AppButton from "./AppButton";
-import AppLoading from "./AppLoading";
-import AppText from "./AppText";
+import AppButton from "../../components/AppButton";
+import AppLoading from "../../components/AppLoading";
+import AppText from "../../components/AppText";
+import Layout from "../../constants/Layout";
+import MapVendorItemCard from "../../components/MapVendorItemCard";
+import VendorData from "../../mock/Vendors.json";
 
 // Named imports
-import { CoordinateTypes } from "../types/ComponentTypes";
-import { getVendors } from "../helper/HelperFunctions";
+import { CoordinateTypes } from "../../types/ComponentTypes";
+import { getVendors } from "../../helper/HelperFunctions";
+import Animated, { Layout as LT, SlideInDown, SlideOutDown } from "react-native-reanimated";
 
 // initial coordinates
 const initialRegion = {
@@ -23,10 +27,14 @@ const initialRegion = {
   longitudeDelta: 0.0421,
 };
 
-// function component for NearbyVendors
-function NearbyVendors() {
+// Constants
+const DeviceWidth = Layout.window.width;
+
+// function component for NearbyVendorsScreen
+function NearbyVendorsScreen() {
   // Local refs
   const MapRef = useRef<MapView>(null);
+  const FlatlistRef = useRef<FlatList>(null);
 
   // Local States
   const [Loading, SetLoading] = useState(true);
@@ -35,6 +43,7 @@ function NearbyVendors() {
   const [Permissison, SetPermissison] = useState(false);
   const [Denied, SetDenied] = useState(false);
   const [GettingLocation, SetGettingLocation] = useState(true);
+  const [ListShow, SetListShow] = useState(true);
 
   // initial call
   useEffect(() => {
@@ -145,6 +154,7 @@ function NearbyVendors() {
         zoomEnabled={true}
         ref={MapRef}
         region={{ ...CurrentCoordinates, latitudeDelta: 0.0922, longitudeDelta: 0.0421 }}
+        onPress={() => SetListShow(!ListShow)}
       >
         {/* Map out the markers for the coordinates given by the user */}
         {Markers.map((marker, index) => (
@@ -152,15 +162,33 @@ function NearbyVendors() {
             key={index}
             coordinate={{ latitude: marker.latitude, longitude: marker.longitude }}
             title={marker.name}
+            onPress={() => FlatlistRef.current?.scrollToIndex({ animated: true, index })}
           />
         ))}
       </MapView>
+
+      {ListShow ? (
+        <Animated.View
+          style={styles.bottomContainer}
+          entering={SlideInDown}
+          exiting={SlideOutDown}
+          layout={LT}
+        >
+          <FlatList
+            ref={FlatlistRef}
+            data={VendorData}
+            renderItem={({ item, index }) => <MapVendorItemCard key={index} {...item} />}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+          />
+        </Animated.View>
+      ) : null}
     </View>
   );
 }
 
 // exports
-export default NearbyVendors;
+export default NearbyVendorsScreen;
 
 // styles
 const styles = StyleSheet.create({
@@ -171,5 +199,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+  bottomContainer: {
+    width: DeviceWidth,
+    height: 200,
+    position: "absolute",
+    bottom: 0,
   },
 });

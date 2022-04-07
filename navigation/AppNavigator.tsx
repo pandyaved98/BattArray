@@ -1,15 +1,22 @@
 // Packages Imports
-import {
-  createStackNavigator,
-  StackNavigationOptions,
-} from "@react-navigation/stack";
+import { useContext } from "react";
+import { createStackNavigator, StackNavigationOptions } from "@react-navigation/stack";
 import { useTheme } from "@react-navigation/native";
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
+
 // Types/components/Navigators imports
+import AuthContext from "../context/AuthContext";
 import { AppStackParamsList } from "./NavigationTypes";
-import SearchVendor from "../screens/RiderDashboard/SearchVendor";
 
 // screen imports
+import BatteryDetailScreen from "../screens/VenderDashboard/BatteryDetailScreen";
+import NearbyVendorsScreen from "../screens/NearbyVendors/NearbyVendorsScreen";
+import PaymentScreen from "../screens/RiderDashboard/PaymentScreen";
+import RiderProfile from "../screens/profile/RiderProfile";
+import VendorDashboardScreen from "../screens/VenderDashboard/VendorDashboardScreen";
+import VendorProfileScreen from "../screens/profile/VendorProfileScreen";
+import BatteryInventoryScreen from "../screens/VenderDashboard/BatteryInventoryScreen";
+import BatteryBooking from "../screens/RiderDashboard/BatteryBooking";
+import RiderBooking from "../screens/VenderDashboard/RiderBooking";
 
 // Create a Stack Navigator
 const Stack = createStackNavigator<AppStackParamsList>();
@@ -18,6 +25,8 @@ const Stack = createStackNavigator<AppStackParamsList>();
 function AppNavigator() {
   // Get the app theme here
   const { colors } = useTheme();
+
+  const { User } = useContext(AuthContext);
 
   // default options for the Stack Screens
   const screenOptions: StackNavigationOptions = {
@@ -28,8 +37,22 @@ function AppNavigator() {
   // Render
   return (
     <Stack.Navigator screenOptions={screenOptions}>
-      {/**App Screens */}
-      <Stack.Screen name="SearchScreen " component={SearchVendor} />
+      {User?.account_type === "VENDOR" ? (
+        <>
+          <Stack.Screen name="VendorDashboardScreen" component={VendorDashboardScreen} />
+          <Stack.Screen name="VendorProfileScreen" component={VendorProfileScreen} />
+        </>
+      ) : (
+        <>
+          <Stack.Screen name="RiderProfileScreen" component={RiderProfile} />
+          <Stack.Screen name="NearbyVendorsScreen" component={NearbyVendorsScreen} />
+          <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
+          <Stack.Screen name="RiderBookingDetailScreen" component={RiderBooking} />
+        </>
+      )}
+      <Stack.Screen name="BatteryDetailScreen" component={BatteryDetailScreen} />
+      <Stack.Screen name="BatteryInventoryScreen" component={BatteryInventoryScreen} />
+      <Stack.Screen name="BatteryBookingScreen" component={BatteryBooking} />
     </Stack.Navigator>
   );
 }

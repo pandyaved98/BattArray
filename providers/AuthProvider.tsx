@@ -3,16 +3,14 @@ import { useState } from "react";
 
 // Local imports and context imports
 import AuthContext from "../context/AuthContext";
+import AppNavigator from "../navigation/AppNavigator";
+import AuthNavigator from "../navigation/AuthNavigator";
 
 // Named imports
-import { AuthProviderProps } from "../types/ContextTypes";
 import { UserProps } from "../types/GlobalTypes";
 
 // AuthProvider function component
-function AuthProvider(props: AuthProviderProps) {
-  // Destructuring props
-  const { children } = props;
-
+function AuthProvider() {
   const [User, SetUser] = useState<UserProps | null>(null);
 
   // function to log the user in
@@ -25,7 +23,11 @@ function AuthProvider(props: AuthProviderProps) {
   const value = { User, Login, Logout };
 
   // Render component based on user authentication status
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={value}>
+      {User ? <AppNavigator /> : <AuthNavigator />}
+    </AuthContext.Provider>
+  );
 }
 
 // connect and export

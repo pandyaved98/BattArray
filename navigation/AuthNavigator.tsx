@@ -4,6 +4,8 @@ import { useTheme } from "@react-navigation/native";
 
 // Types/components/Navigators imports
 import { AuthStackParamsList } from "./NavigationTypes";
+
+// screen imports
 import Login from "../screens/Login";
 
 // Create a Stack Navigator
@@ -20,12 +22,11 @@ function AuthNavigator() {
   };
 
   // Render
-  return <Stack.Navigator screenOptions={screenOptions}>
-    <Stack.Screen 
-      name='LoginScreen'
-      component={Login}
-    />
-  </Stack.Navigator>;
+  return (
+    <Stack.Navigator screenOptions={screenOptions}>
+      <Stack.Screen name="LoginScreen" component={Login} />
+    </Stack.Navigator>
+  );
 }
 
 // Exporting AuthNavigator

@@ -6,12 +6,13 @@ import { data } from "./data";
 import { Feather } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { AppScreenProps } from "../../navigation/NavigationTypes";
+
 const BatteryInventoryScreen = ({ navigation }: AppScreenProps<"BatteryInventoryScreen">) => {
   console.log(data);
   return (
     <View style={{ margin: "3%" }}>
-      {data?.map(info => (
-        <>
+      {data?.map((info, index) => (
+        <View key={index}>
           <TouchableOpacity
             style={{
               backgroundColor: "#dedede",
@@ -45,7 +46,7 @@ const BatteryInventoryScreen = ({ navigation }: AppScreenProps<"BatteryInventory
               <Text>Charge Left : {info?.chargeLeft}</Text>
             </View>
           </TouchableOpacity>
-        </>
+        </View>
       ))}
     </View>
   );

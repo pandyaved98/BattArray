@@ -18,17 +18,13 @@ const PaymentScreen = () => {
         }}
       >
         <Text style={{ fontSize: 17 }}>Order Summary</Text>
-        <Text style={{ fontSize: 15, marginTop: 15 }}>
-          Number of Items : 1{" "}
-        </Text>
+        <Text style={{ fontSize: 15, marginTop: 15 }}>Number of Items : 1 </Text>
         <Text style={{ fontSize: 15 }}>Item Name: Amaron Battery </Text>
         <Text style={{ fontSize: 15 }}>Pick Up location : New delhi</Text>
         <Text style={{ fontSize: 15 }}>Total Payable Amount: $2</Text>
       </View>
       <View>
-        <Text style={{ fontSize: 17, marginTop: 30 }}>
-          Choose Payment Method
-        </Text>
+        <Text style={{ fontSize: 17, marginTop: 30 }}>Choose Payment Method</Text>
         <View
           style={{
             backgroundColor: "#dedede",
@@ -51,9 +47,7 @@ const PaymentScreen = () => {
             <Text style={{ fontSize: 15, marginTop: 10 }}>UPI</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={{ fontSize: 15, marginTop: 10 }}>
-              Cash on delivery
-            </Text>
+            <Text style={{ fontSize: 15, marginTop: 10 }}>Cash on delivery</Text>
           </TouchableOpacity>
         </View>
       </View>

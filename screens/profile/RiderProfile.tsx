@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-const RiderProfile = () => {
+import { AppScreenProps } from "../../navigation/NavigationTypes";
+
+const RiderProfile = ({ navigation }: AppScreenProps<"RiderProfileScreen">) => {
   return (
     <>
       <Text style={{ fontSize: 17 }}>RiderProfile</Text>
-      <View style={{ margin: "5%", alignItems: "center" }}>
+      <ScrollView style={{ margin: "5%" }}>
         <View style={{ alignItems: "center" }}>
           <MaterialCommunityIcons name="face" size={54} color="black" />
           <View>
@@ -29,15 +31,11 @@ const RiderProfile = () => {
               <Text style={{ fontSize: 17 }}>Booking History </Text>
 
               <View style={styles.Styles1}>
-                <Text style={{ fontSize: 15, marginTop: 10 }}>
-                  Jayalaxmi Traders{" "}
-                </Text>
+                <Text style={{ fontSize: 15, marginTop: 10 }}>Jayalaxmi Traders </Text>
                 <Text>Pick up Location : Anand Vihar</Text>
               </View>
               <View style={styles.Styles1}>
-                <Text style={{ fontSize: 15, marginTop: 10 }}>
-                  Bnaglore Electricals
-                </Text>
+                <Text style={{ fontSize: 15, marginTop: 10 }}>Bnaglore Electricals</Text>
                 <Text>Pick up Location : Preet Vihar</Text>
               </View>
               <View style={styles.Styles1}>
@@ -47,7 +45,12 @@ const RiderProfile = () => {
             </View>
           </View>
         </View>
-      </View>
+
+        <Button
+          title="See Nearby Vendors"
+          onPress={() => navigation.navigate("NearbyVendorsScreen")}
+        />
+      </ScrollView>
     </>
   );
 };

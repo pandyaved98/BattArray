@@ -1,6 +1,6 @@
 // React Native Paper  Colors
 export const ReactNativePaperColors = {
-    accent: "07294A",
+    accent: "#07294A",
     backdrop: "rgba(0, 0, 0, 0.5)",
     disabled: "rgba(0, 0, 0, 0.26)",
     error: "#FF4C58",

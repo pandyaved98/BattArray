@@ -8,8 +8,6 @@ import { AppScreenProps } from "../../navigation/NavigationTypes";
 const BatteryDetailScreen = ({ route, navigation }: AppScreenProps<"BatteryDetailScreen">) => {
   const BatteryInfo = route?.params?.data;
 
-  console.log(BatteryInfo);
-
   return (
     <View style={{ margin: "6%" }}>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>

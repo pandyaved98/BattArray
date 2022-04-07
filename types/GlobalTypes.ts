@@ -17,4 +17,8 @@ export interface UserProps {
     name?: string;
     profile_picture?: string;
     email?: string;
+    id?: string;
+    password?: string;
+    account_type?: string;
+    batteries?: Array<any>;
 }

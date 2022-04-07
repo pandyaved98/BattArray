@@ -7,22 +7,11 @@ import Animated, { FadeIn, FadeOut, Layout as LT } from "react-native-reanimated
 // Local Imports
 import { BackDropProps } from "../types/ComponentTypes";
 import Layout from "../constants/Layout";
-import useBackHandler from "../hooks/useBackhandler";
 
 // function component for BackDrop
 function BackDrop(props: BackDropProps) {
   // Destructuring props
   const { visible, style, onBackDropPress, children } = props;
-
-  // handle backpress
-  useBackHandler(() => {
-    if (visible) {
-      onBackDropPress();
-      return true;
-    }
-
-    return false;
-  });
 
   // render
   return visible ? (

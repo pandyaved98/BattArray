@@ -5,7 +5,7 @@
 // const OnBoarding = () => {
 //   return (
 //     <View style={styles.container}>
-//         <FlatList 
+//         <FlatList
 //             data={OnboardingSlides}
 //             renderItem={(item) => <OnBoardingItem items={item} />}
 //         />

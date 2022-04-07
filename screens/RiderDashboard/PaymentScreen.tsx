@@ -5,8 +5,19 @@ const PaymentScreen = () => {
   return (
     <View style={{ margin: "5%" }}>
       <Text style={{ fontSize: 17 }}>PaymentScreen</Text>
-      <View>
-        <Text style={{ fontSize: 17, marginTop: 30 }}>Order Summary</Text>
+      <View
+        style={{
+          backgroundColor: "#dedede",
+          borderRadius: 10,
+          padding: 10,
+          marginTop: 20,
+          elevation: 5,
+          shadowColor: "#000000",
+          shadowOffset: 5,
+          height: "auto",
+        }}
+      >
+        <Text style={{ fontSize: 17 }}>Order Summary</Text>
         <Text style={{ fontSize: 15, marginTop: 15 }}>
           Number of Items : 1{" "}
         </Text>
@@ -18,18 +29,33 @@ const PaymentScreen = () => {
         <Text style={{ fontSize: 17, marginTop: 30 }}>
           Choose Payment Method
         </Text>
-        <TouchableOpacity>
-          <Text style={{ fontSize: 15, marginTop: 15 }}>Debit Card</Text>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={{ fontSize: 15 }}>Credit Card</Text>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={{ fontSize: 15 }}>UPI</Text>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={{ fontSize: 15 }}>Cash on delivery</Text>
-        </TouchableOpacity>
+        <View
+          style={{
+            backgroundColor: "#dedede",
+            borderRadius: 10,
+            padding: 10,
+            marginTop: 20,
+            elevation: 5,
+            shadowColor: "#000000",
+            shadowOffset: 5,
+            height: "auto",
+          }}
+        >
+          <TouchableOpacity>
+            <Text style={{ fontSize: 15, marginTop: 10 }}>Debit Card</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={{ fontSize: 15, marginTop: 10 }}>Credit Card</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={{ fontSize: 15, marginTop: 10 }}>UPI</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={{ fontSize: 15, marginTop: 10 }}>
+              Cash on delivery
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );

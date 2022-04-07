@@ -28,7 +28,11 @@ function AppNavigator() {
   };
 
   // Render
-  return <Stack.Navigator screenOptions={screenOptions}></Stack.Navigator>;
+  return (
+    <Stack.Navigator screenOptions={screenOptions}>
+      <Stack.Screen name="payment" component={RiderProfile} />
+    </Stack.Navigator>
+  );
 }
 
 // Exporting AppNavigator

@@ -7,10 +7,12 @@ import { Feather } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { AppScreenProps } from "../../navigation/NavigationTypes";
 
-const BatteryInventoryScreen = ({ navigation }: AppScreenProps<"BatteryInventoryScreen">) => {
+const BatteryInventoryScreen = ({
+  navigation,
+}: AppScreenProps<"BatteryInventoryScreen">) => {
   console.log(data);
   return (
-    <View style={{ margin: "3%" }}>
+    <View style={{ margin: "5%", marginTop: "10%" }}>
       {data?.map((info, index) => (
         <View key={index}>
           <TouchableOpacity
@@ -23,7 +25,9 @@ const BatteryInventoryScreen = ({ navigation }: AppScreenProps<"BatteryInventory
               shadowColor: "#000000",
               shadowOffset: 5,
             }}
-            onPress={() => navigation.navigate("BatteryDetailScreen", { data: info })}
+            onPress={() =>
+              navigation.navigate("BatteryDetailScreen", { data: info })
+            }
           >
             <View>
               <View

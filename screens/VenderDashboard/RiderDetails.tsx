@@ -6,7 +6,7 @@ import RiderCard from "../../components/RiderCard";
 
 export default function RiderDetails() {
   const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
   return (
     <View style={styles.container}>
@@ -37,13 +37,13 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 18,
-    fontWeight: "bold",
-    color: "#333",
+    // fontWeight: "bold",
+    color: "black",
   },
   middleText: {
     fontSize: 18,
-    fontWeight: "bold",
-    color: "#333",
+    //  fontWeight: "bold",
+    color: "black",
     paddingBottom: 100,
   },
 });

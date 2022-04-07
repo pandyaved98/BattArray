@@ -5,7 +5,7 @@ import { FontAwesome } from "@expo/vector-icons";
 
 const VendorDashboardScreen = ({ navigation }) => {
   return (
-    <View style={{ margin: "2.5%" }}>
+    <View style={{ margin: "5%", marginTop: "10%" }}>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
         <Text>Estimated cost to charge</Text>
         <Text>$ 1.5/KW</Text>
@@ -37,7 +37,10 @@ const VendorDashboardScreen = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View>
-          <TouchableOpacity style={{ alignItems: "center" }}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("RiderBookingScreen")}
+            style={{ alignItems: "center" }}
+          >
             <FontAwesome name="calendar" size={44} color="black" />
             <Text>Rider Bookings</Text>
           </TouchableOpacity>

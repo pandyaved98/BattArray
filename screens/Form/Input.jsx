@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     input: {
         width: '80%',
         height:65,
-        backgroundColor: '#f4f4f4',
+        backgroundColor: 'white',
         margin: 10,
         fontSize:20,
         borderRadius: 20,

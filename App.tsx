@@ -20,7 +20,7 @@ export default function App() {
       <NavigationContainer>
         <PaperProvider>
           {/* If User is logged in we will show the AppNavigator or else we will show the AuthNavigator */}
-          {/* {User ? <AppNavigator /> : <AuthNavigator />} */}
+          <AuthNavigator />
         </PaperProvider>
       </NavigationContainer>
     </AuthProvider>

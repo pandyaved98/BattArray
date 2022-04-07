@@ -62,8 +62,7 @@ const SignUp = (props) => {
     </View>
     </FormContainer>
     </KeyboardAvoidingView>
-  )
-  
+  ) 
 }
 const styles = StyleSheet.create({
   container:{

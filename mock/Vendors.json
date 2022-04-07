@@ -1,0 +1,47 @@
+[
+    {
+        "id": "1",
+        "name": "Kartikey Vaish",
+        "email": "kartikey@gmail.com",
+        "profile_picture": "https://i.imgur.com/3tr7J02.png",
+        "store_name": "Kartikey Store",
+        "battery_count": 197,
+        "price": 433
+    },
+    {
+        "id": "2",
+        "name": "Rushil Shekhar",
+        "email": "lblackaby1@harvard.edu",
+        "profile_picture": "https://www.gravatar.com/avatar/f1a5907c5adefa8c1c0c928e76fc6546?s=300&r=g&d=mm",
+        "store_name": "Rushil Store",
+        "battery_count": 104,
+        "price": 526
+    },
+    {
+        "id": "3",
+        "name": "Aditya Sharma",
+        "email": "gwyant2@fastcompany.com",
+        "profile_picture": "https://teamepic.io/wp-content/plugins/buddyboss-platform/bp-core/images/mystery-man.jpg",
+        "store_name": "Aditya Store",
+        "battery_count": 200,
+        "price": 267
+    },
+    {
+        "id": "4",
+        "name": "Wilson Furtado",
+        "email": "mhenkmann3@cyberchimps.com",
+        "profile_picture": "https://teamepic.io/wp-content/plugins/buddyboss-platform/bp-core/images/mystery-man.jpg",
+        "store_name": "Wilson Store",
+        "battery_count": 177,
+        "price": 597
+    },
+    {
+        "id": "5",
+        "name": "Grahil Aggarwal",
+        "email": "rlappine4@jigsy.com",
+        "profile_picture": "https://www.gravatar.com/avatar/e0b82ea3043b8b2a24abd2a9089001fc?s=300&r=g&d=mm",
+        "store_name": "Twitterworks",
+        "battery_count": 135,
+        "price": 586
+    }
+]

@@ -9,6 +9,7 @@ import { useTheme } from "@react-navigation/native";
 import { AppStackParamsList } from "./NavigationTypes";
 import RiderBooking from "../screens/VenderDashboard/RiderBooking";
 import RiderProfile from "../screens/profile/RiderProfile";
+import PaymentScreen from "../screens/RiderDashboard/PaymentScreen";
 
 // screen imports
 
@@ -29,7 +30,7 @@ function AppNavigator() {
   // Render
   return (
     <Stack.Navigator screenOptions={screenOptions}>
-      <Stack.Screen name="RiderProfile" component={RiderProfile} />
+      <Stack.Screen name="RiderPayment" component={PaymentScreen} />
     </Stack.Navigator>
   );
 }

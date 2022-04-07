@@ -2,7 +2,7 @@
 
 // Packages Imports
 import { useEffect, useRef, useState } from "react";
-import { View, StyleSheet, Linking, FlatList } from "react-native";
+import { View, StyleSheet, Linking, FlatList, Button } from "react-native";
 import * as Location from "expo-location";
 import MapView, { Marker } from "react-native-maps";
 
@@ -17,7 +17,14 @@ import VendorData from "../../mock/Vendors.json";
 // Named imports
 import { CoordinateTypes } from "../../types/ComponentTypes";
 import { getVendors } from "../../helper/HelperFunctions";
-import Animated, { Layout as LT, SlideInDown, SlideOutDown } from "react-native-reanimated";
+import Animated, {
+  Layout as LT,
+  SlideInDown,
+  SlideInUp,
+  SlideOutDown,
+  SlideOutUp,
+} from "react-native-reanimated";
+import { AppScreenProps } from "../../navigation/NavigationTypes";
 
 // initial coordinates
 const initialRegion = {
@@ -31,7 +38,7 @@ const initialRegion = {
 const DeviceWidth = Layout.window.width;
 
 // function component for NearbyVendorsScreen
-function NearbyVendorsScreen() {
+function NearbyVendorsScreen({ navigation }: AppScreenProps<"NearbyVendorsScreen">) {
   // Local refs
   const MapRef = useRef<MapView>(null);
   const FlatlistRef = useRef<FlatList>(null);
@@ -183,6 +190,20 @@ function NearbyVendorsScreen() {
           />
         </Animated.View>
       ) : null}
+
+      {ListShow ? (
+        <Animated.View
+          style={styles.searchContainer}
+          entering={SlideInUp}
+          exiting={SlideOutUp}
+          layout={LT}
+        >
+          <Button
+            title="Search Vendors"
+            onPress={() => navigation.navigate("SearchVendorScreen")}
+          />
+        </Animated.View>
+      ) : null}
     </View>
   );
 }
@@ -206,4 +227,5 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
   },
+  searchContainer: { position: "absolute", top: 10, width: "100%", alignItems: "center" },
 });

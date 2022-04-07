@@ -17,6 +17,7 @@ import VendorProfileScreen from "../screens/profile/VendorProfileScreen";
 import BatteryInventoryScreen from "../screens/VenderDashboard/BatteryInventoryScreen";
 import BatteryBooking from "../screens/RiderDashboard/BatteryBooking";
 import RiderBooking from "../screens/VenderDashboard/RiderBooking";
+import SearchVendor from "../screens/RiderDashboard/SearchVendor";
 
 // Create a Stack Navigator
 const Stack = createStackNavigator<AppStackParamsList>();
@@ -51,6 +52,7 @@ function AppNavigator() {
       <Stack.Screen name="BatteryDetailScreen" component={BatteryDetailScreen} />
       <Stack.Screen name="BatteryInventoryScreen" component={BatteryInventoryScreen} />
       <Stack.Screen name="BatteryBookingScreen" component={BatteryBooking} />
+      <Stack.Screen name="SearchVendorScreen" component={SearchVendor} />
     </Stack.Navigator>
   );
 }
